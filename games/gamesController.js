@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const dbgames = require("../games/games");
+const dbgames = require("./games");
 
 router.get("/games", (req, res) => {
     dbgames.findAll().then((ListGames) => {

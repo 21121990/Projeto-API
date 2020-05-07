@@ -3,7 +3,10 @@ const app = express();
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
 const gamesController = require("./games/gamesController");
+const cors = require("cors"); //necessário para consumir API localmente - npm install cors --save
 
+
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
